@@ -1,7 +1,7 @@
 import streamlit
-import numpy
-import cv2
-import math
-import PIL  
-import sklearn
-import pandas
+numpy
+cv2
+math
+PIL  
+sklearn
+pandas
