@@ -1,4 +1,4 @@
-import streamlit
+streamlit
 numpy
 cv2
 math
