@@ -558,7 +558,7 @@ def find_tbar(image):
     else:
         return 0
 
-page = st.sidebar.selectbox("Explore Or Predict", ("Predict", "Explore"))
+page = st.sidebar.selectbox("Explore & About Us", ("Predict", "About Us"))
 
 
 #t-bar
