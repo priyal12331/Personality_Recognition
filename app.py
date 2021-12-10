@@ -1,9 +1,12 @@
+import sklearn
 import streamlit as st
 import numpy as np
-import cv2
-import math
+import opencv-python as cv2
+import python-math as math
 import matplotlib.pyplot as plt
+import Pillow as PIL
 from PIL import Image 
+import scikit-learn as sklearn
 
 st.title("Machine Learning based Automated Personality Assessment using Individual Handwriting Samples")
 
