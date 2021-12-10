@@ -563,7 +563,7 @@ page = st.sidebar.selectbox("Explore Or Predict", ("Predict", "Explore"))
 
 #t-bar
 fin_tbar=0
-uploaded_file2 = st.file_uploader("Please Upload your Handwriting Sample containing only letter T",type=['png','jpeg'])
+uploaded_file2 = st.file_uploader("Please Upload your Handwriting Sample containing only small letter T",type=['png','jpeg','jpg'])
 
 if uploaded_file2 is not None:
     img2=np.array(Image.open(uploaded_file2))
@@ -739,7 +739,7 @@ if uploaded_file is not None:
     if sample_pred_rf_open==1:
         st.write("1 => Openness to experience")
     else :
-        st.write("0 => Opennessto experience")
+        st.write("0 => Openness to experience")
 
 
     if sample_pred_rf_extra==1:
