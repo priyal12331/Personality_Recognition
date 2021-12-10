@@ -571,7 +571,7 @@ if uploaded_file2 is not None:
 
 features.append(fin_tbar)
 
-uploaded_file = st.file_uploader("Please Upload your Handwriting Sample",type=['png','jpeg'])
+uploaded_file = st.file_uploader("Please Upload your Handwriting Sample",type=['png','jpeg','jpg'])
 
 
 if uploaded_file is not None:
@@ -597,7 +597,7 @@ if uploaded_file is not None:
     #Slant Angle 
     fin_slant=find_slant(img)
     features.append(fin_slant)
-
+    st.write("Feature vector for the Handwriting sample is : ")
     st.write(features)
 
     #Model Training and Accuracy 
@@ -727,8 +727,70 @@ if uploaded_file is not None:
 
     rf_output = [sample_pred_rf_neuro,sample_pred_rf_open,sample_pred_rf_extra,sample_pred_rf_agree,sample_pred_rf_consc] 
 
-    st.write(rf_output)
+    st.write(" ")
+    st.write("Prediction Vector : ")
+    st.write(" ")
+    if sample_pred_rf_neuro==1:
+        st.write("1 => Neuroticism")
+    else :
+        st.write("0 => Neuroticism")
 
+
+    if sample_pred_rf_open==1:
+        st.write("1 => Openness to experience")
+    else :
+        st.write("0 => Opennessto experience")
+
+
+    if sample_pred_rf_extra==1:
+        st.write("1 => Extraversion")
+    else :
+        st.write("0 => Extraversion")
+
+    if sample_pred_rf_agree==1:
+        st.write("1 => Agreeableness")
+    else :
+        st.write("0 => Agreeableness")
+
+    if sample_pred_rf_consc==1:
+        st.write("1 => Conscientiousness")
+    else :
+        st.write("0 => Conscientiousness")
+        
+    st.write(" ")
+    st.write(" ")
+    st.write("Your Personality Traits are as follows : ")
+
+    if sample_pred_rf_neuro==1:
+        st.write("1. You have a tendency to be 'nervous' rather than confident")
+    else :
+        st.write("1. You have a tendency to be 'confident' rather than nervous.")
+
+
+    if sample_pred_rf_open==1:
+        st.write("2. You have a 'curious' personality and have a desire to adventure")
+    else :
+        st.write("2. You have a 'curious' personality and have a desire to adventure")
+
+
+    if sample_pred_rf_extra==1:
+        st.write("3. You are generally 'outgoing' and talkative.")
+    else :
+        st.write("3. You remain 'solitary' and mostly choose not to talk.")
+
+    if sample_pred_rf_agree==1:
+        st.write("4. You are 'compassionate' instead of suspicious and have a forth coming attitude.")
+    else :
+        st.write("4. You are more 'suspicious' than compassionate.")
+
+    if sample_pred_rf_consc==1:
+        st.write("5. You are very 'organized' and believe in carefully planned.")
+    else :
+        st.write("5. You are sometimes 'careless' and less organized.")
+
+
+    
+    
 
 
 
